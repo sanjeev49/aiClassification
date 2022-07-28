@@ -15,7 +15,7 @@ import argparse
 import os
 import logging
 from src.utils.common import read_yaml, create_directories
-from src.utils.model import seperate_y, load_resnet_model
+from src.utils.model import seperate_y, download_resent_model
 from src.utils.callback import save_callback
 
 
@@ -36,6 +36,8 @@ def create_model(config_path, params_path):
     
     artifacts = config["artifacts"]
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
+
+    EPOCHS = params["EPOCHS"]
 
     model_dir = os.path.join(artifacts_dir, "Models")
     create_directories([model_dir])
@@ -71,9 +73,10 @@ def create_model(config_path, params_path):
 
     model.compile(loss = ["binary_crossentropy", "binary_crossentropy","binary_crossentropy","binary_crossentropy"], optimizer="adam", metrics = ['accuracy'])
 
-    model.fit(X, [a,b,c,d], epochs = 5, validation_split = 0.2, callbacks =tb_callback)
+    model.fit(X, [a,b,c,d], epochs = EPOCHS, validation_split = 0.2, callbacks =tb_callback)
 
     model.save(multioutput)
+    logging.info(f"MOdel is build and saved at {multioutput}")
 
     logging.info(f"Callbacks are at logs directory and model is at {model_dir}")
     logging.info("Trainning Complete")

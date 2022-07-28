@@ -1,1 +1,7 @@
 # This contains params to be used by the stages to train or predict
+# This contains params to be used by the stages to train or predict
+AUGMENTATION:  True
+IMAGE_SIZE: [224, 224, 3]
+BATCH_SIZE: 64
+EPOCHS: 10
+CLASSES:  4

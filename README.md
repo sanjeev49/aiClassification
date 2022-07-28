@@ -1,6 +1,4 @@
-![Untitled design (4)](https://user-images.githubusercontent.com/62059604/99800421-5818bf80-2b5a-11eb-83ad-c0fe6a2d48be.png)
 
-![Untitled design (5)](https://user-images.githubusercontent.com/62059604/99800592-9e6e1e80-2b5a-11eb-8f70-4796dd0ee36a.png)
 
 - This repository represents **" MultiVariate Classification  "**.
 - With the help of this project we can Classifiy 4 Attributes of An Image .
