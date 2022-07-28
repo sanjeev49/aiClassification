@@ -23,11 +23,10 @@
 
 
 ## :gear: Setup
-1. Install PyTorch :-
+1. Install Tensorflow :-
 ```bash
 $ pip3 install tensorflow
 ```
-2. Install :-
 ```bash
 $ pip3 install pandas
 
@@ -44,9 +43,10 @@ $ pip3 install -e.
 ## 🎯 Inference demo
 1. Testing with **Images** ( Put test images in **AlphaPose/examples/demo/** )  :-
 ```bash
-$ python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/ --save_img
+$ python src/infrence.py 
 
 ```
+In img_path give the path of the image that you want to get prediction. 
 
 
 
