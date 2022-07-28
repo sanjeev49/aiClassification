@@ -38,8 +38,7 @@ def create_model(config_path, params_path):
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
     EPOCHS = params["EPOCHS"]
-    model_dir = os.path.join(artifacts_dir, "")
-
+    
     model_dir = os.path.join(artifacts_dir, artifacts["TRAINED_MODEL_DIR"])
     create_directories([model_dir])
 
