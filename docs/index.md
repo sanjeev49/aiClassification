@@ -3,14 +3,11 @@ Multivariate Classification
 
 ## STEPS -
 
-### STEP 01- Create a repository by using template repository
 
-### STEP 02- Clone the new repository
-
-### STEP 03- Create a conda environment after opening the repository in VSCODE
+### STEP 01- Create a conda environment after opening the repository in VSCODE
 
 ```bash
-conda create --prefix ./env python=3.7 -y
+conda create --prefix ./env python=3.8.13 -y
 ```
 
 ```bash
@@ -21,21 +18,16 @@ OR
 source activate ./env
 ```
 
-### STEP 04- install the requirements
+### STEP 02- install the requirements
 ```bash
 pip install -r requirements.txt
 ```
 
-### STEP 05- initialize the dvc project
+### STEP 03- initialize the dvc project
 ```bash
 dvc init
 ```
-
-### STEP 06- commit and push the changes to the remote repository
-
-
-
-
+It will run for 100 Epochs. You can change this into params.yaml section for the number of records.
 
 - This repository represents **" MultiVariate Classification  "**.
 - With the help of this project we can Classifiy 4 Attributes of An Image .
