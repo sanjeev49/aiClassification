@@ -59,6 +59,11 @@ $ python src/infrence.py
 ```
 In img_path give the path of the image that you want to get prediction. 
 
+## To run Tensorboard 
+
+```bash
+tensorboard --logdir ./logs
+```
 
 
 ## Contributors <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" width=35 height=25> 
