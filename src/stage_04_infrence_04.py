@@ -28,22 +28,22 @@ def prediction_model(config_path, params_path):
     artifacts = config["artifacts"]
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
-    model_dir = os.path.join(artifacts_dir, "Models")
+    model_dir = os.path.join(artifacts_dir, artifacts["TRAINED_MODEL_DIR"])
     root_dir = os.getcwd()
-    raw_data_dir = os.path.join(root_dir, "Multilabel")
-    raw_img_dir = os.path.join(raw_data_dir, "photos")
+    raw_data_dir = os.path.join(root_dir, artifacts["RAW_DATA_DIR"])
+    raw_img_dir = os.path.join(raw_data_dir, artifacts["RAW_IMAGE_DIR"])
     # Change it to any image from Multilabel/photos folder
     img_path = os.path.join(raw_img_dir, "image_012.jpg")
 
-    multioutput_model = os.path.join(model_dir, "multioutput.h5")
-    model = load_keras_model(multioutput_model)
+    multioutput_resnet_model = os.path.join(model_dir, artifacts["BASE_MODEL_NAME"])
+    model = load_keras_model(multioutput_resnet_model)
 
     loaded_img = load_input_img(img_path)
 
     prediction = model.predict(loaded_img)
     # Generating Prob_pred for probabilites pred is using a thrshold of 0.5 to assign a label 
     prob_pred, pred= seperate_prediction(prediction)
-    logging.info(f"The probabilites of these claases are {a}")
+    logging.info(f"The probabilites of these claases are {prob_pred}")
     logging.info(f"The actual prediction for the img {img_path} is {pred}")
     print(pred)
     

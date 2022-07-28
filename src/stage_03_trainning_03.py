@@ -38,32 +38,44 @@ def create_model(config_path, params_path):
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
     EPOCHS = params["EPOCHS"]
+    model_dir = os.path.join(artifacts_dir, "")
 
-    model_dir = os.path.join(artifacts_dir, "Models")
+    model_dir = os.path.join(artifacts_dir, artifacts["TRAINED_MODEL_DIR"])
     create_directories([model_dir])
 
-    multioutput = os.path.join(model_dir, "multioutput.h5")
+    multioutput_model = os.path.join(model_dir, artifacts["BASE_MODEL_NAME"])
 
-    np_saved_dir  = os.path.join(artifacts_dir, "Trainning_data")
-    create_directories([np_saved_dir])
-    label_np_file = os.path.join(np_saved_dir, "y_data.npy")
-    img_np_file = os.path.join(np_saved_dir, "X_data.npy")
+    training_data_dir  = os.path.join(artifacts_dir, artifacts["TRAINING_DATA_DIR"])
+    label_np_file = os.path.join(training_data_dir, artifacts["LABEL_TRAING_DATA"])
+    img_np_file = os.path.join(training_data_dir, artifacts["IMG_TRAINING_DATA"])
 
-    X = np.load(img_np_file, allow_pickle=True)
-    y = np.load(label_np_file, allow_pickle=True)
+    # Loading params
+    INPUT_SHAPE = params["INPUT_SHAPE"]
+    activation = params["ACTIVATION"]
+    validation_split = params["VALIDATION_SPLIT"]
+    loss = params["LOSS"]
+    optimmizer = params["OPTIMIZER"]
+
+    try:
+        X = np.load(img_np_file, allow_pickle=True)
+        y = np.load(label_np_file, allow_pickle=True)
+        logging.info("Training data is loaded from {}".format(training_data_dir))
+    except:
+        logging.info("Training Data is not available at {}".format(training_data_dir))
     # Seperating all the columns of label. 
     a,b,c,d = seperate_y(y)
 
     # lOading pretrained model resnet 50
     resnet_base = download_resent_model()
     
-    xinput = Input(shape=(224, 224, 3))
+    xinput = Input(shape=(224,224,3))
+    print(INPUT_SHAPE)
     inp = resnet_base(xinput)
 
-    prediction1 = layers.Dense(1, activation='sigmoid', name='a')(inp)
-    prediction2 = layers.Dense(1, activation='sigmoid', name='b')(inp)
-    prediction3 = layers.Dense(1, activation='sigmoid', name='c')(inp)
-    prediction4 = layers.Dense(1, activation='sigmoid', name='d')(inp)
+    prediction1 = layers.Dense(1, activation=activation, name='a')(inp)
+    prediction2 = layers.Dense(1, activation=activation, name='b')(inp)
+    prediction3 = layers.Dense(1, activation=activation, name='c')(inp)
+    prediction4 = layers.Dense(1, activation=activation, name='d')(inp)
 
     model = Model(xinput,[prediction1, prediction2, prediction3, prediction4])
     tb_callback = save_callback()
@@ -71,12 +83,12 @@ def create_model(config_path, params_path):
 
     logging.info(f"The summary of the model is {model.summary()}")
 
-    model.compile(loss = ["binary_crossentropy", "binary_crossentropy","binary_crossentropy","binary_crossentropy"], optimizer="adam", metrics = ['accuracy'])
+    model.compile(loss = [loss, loss,loss,loss], optimizer=optimmizer, metrics = ['accuracy'])
 
-    model.fit(X, [a,b,c,d], epochs = EPOCHS, validation_split = 0.2, callbacks =tb_callback)
+    model.fit(X, [a,b,c,d], epochs = EPOCHS, validation_split = validation_split, callbacks =tb_callback)
 
-    model.save(multioutput)
-    logging.info(f"MOdel is build and saved at {multioutput}")
+    model.save(multioutput_model)
+    logging.info(f"MOdel is build and saved at {multioutput_model}")
 
     logging.info(f"Callbacks are at logs directory and model is at {model_dir}")
     logging.info("Trainning Complete")
