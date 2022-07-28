@@ -26,7 +26,6 @@
 1. Install PyTorch :-
 ```bash
 $ pip3 install tensorflow
-
 ```
 2. Install :-
 ```bash
