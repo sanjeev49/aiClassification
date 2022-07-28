@@ -35,13 +35,14 @@ def prediction_model(config_path, params_path):
     # Change it to any image from Multilabel/photos folder
     img_path = os.path.join(raw_img_dir, "image_012.jpg")
 
-    multioutput = os.path.join(model_dir, "multioutput.h5")
-    model = load_keras_model(multioutput)
+    multioutput_model = os.path.join(model_dir, "multioutput.h5")
+    model = load_keras_model(multioutput_model)
 
     loaded_img = load_input_img(img_path)
 
     prediction = model.predict(loaded_img)
-    a, pred= seperate_prediction(prediction)
+    # Generating Prob_pred for probabilites pred is using a thrshold of 0.5 to assign a label 
+    prob_pred, pred= seperate_prediction(prediction)
     logging.info(f"The probabilites of these claases are {a}")
     logging.info(f"The actual prediction for the img {img_path} is {pred}")
     print(pred)
