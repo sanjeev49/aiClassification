@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 REPO_NAME = "Image_attribute_classification"
 AUTHOR_USER_NAME = "sanjeev49"
 SRC_REPO = "src"
-LIST_OF_REQUIREMENTS = ["dvc", "tensorflow", "matplotlib", "pandas", "sklearn"]
+#LIST_OF_REQUIREMENTS = ["dvc", "tensorflow", "matplotlib", "pandas", "sklearn"]
 
 
 setup(
@@ -22,5 +22,5 @@ setup(
     packages=[SRC_REPO],
     license="MIT",
     python_requires=">=3.7",
-    install_requires=LIST_OF_REQUIREMENTS
+    #install_requires=LIST_OF_REQUIREMENTS
 )
