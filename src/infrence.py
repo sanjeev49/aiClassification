@@ -44,6 +44,7 @@ def prediction_model(config_path, params_path):
     a, pred= seperate_prediction(prediction)
     logging.info(f"The probabilites of these claases are {a}")
     logging.info(f"The actual prediction for the img {img_path} is {pred}")
+    print(pred)
     
 
 if __name__ == '__main__':
