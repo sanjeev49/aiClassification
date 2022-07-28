@@ -53,7 +53,7 @@ def create_model(config_path, params_path):
     a,b,c,d = seperate_y(y)
 
     # lOading pretrained model resnet 50
-    resnet_base = load_resnet_model()
+    resnet_base = download_resent_model()
     
     xinput = Input(shape=(224, 224, 3))
     inp = resnet_base(xinput)

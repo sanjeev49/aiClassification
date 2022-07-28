@@ -1,15 +1,12 @@
 #from keras.applications.vgg16 import decode_predictions
-from copyreg import pickle
+from tarfile import TarError
 from keras.applications.regnet import preprocess_input
 import tensorflow as tf
 from keras.utils import load_img
 import pandas as pd 
 import numpy as np 
+from tensorflow import keras
 from tensorflow.keras.utils import img_to_array
-from tensorflow.keras.layers import Dense
-from tensorflow.keras import layers
-from tensorflow.keras import Input
-from tensorflow.keras.models import Model
 import logging
 import os 
 
@@ -47,7 +44,7 @@ def seperate_y(y: np.abs) -> list:
     return np.array(a), np.array(b), np.array(c), np.array(d)
 
 
-def load_resnet_model():
+def download_resent_model():
     """
     This will load resnet model and returns the output which can be used for trainning
     """
@@ -57,3 +54,33 @@ def load_resnet_model():
         layer.trainable = False
 
     return resnet_base
+
+
+def load_keras_model(model_path: os.path) :
+    """
+    This will load keras Model
+    """
+
+    model = keras.models.load_model(model_path)
+    return model
+
+def load_input_img(img_path: os.path):
+    img  = load_img(img_path, target_size=(224,224,3))
+    img = img_to_array(img)
+    img = preprocess_input(img)
+    img = img.reshape(1, img.shape[0], img.shape[1], 3)
+    return img
+
+def seperate_prediction(arr: np.array):
+    li = []
+    li.append([arr[0][0], arr[1][0], arr[2][0], arr[3][0]])
+    a, b ,c , d = li[0][0][0], li[0][1][0], li[0][2][0] , li[0][3][0]
+
+    li2 = [a,b,c,d]
+    li3 = []
+    for i in li2:
+        if (i>0.5):
+            li3.append(1)
+        if (i<0.5):
+            li3.append(0)
+    return li2, li3
