@@ -1,0 +1,22 @@
+[2022-07-28 18:20:03,174: INFO: infrence]: 
+********************
+[2022-07-28 18:20:03,174: INFO: infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-07-28 18:20:03,174: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-28 18:20:03,174: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-28 18:20:05,738: INFO: infrence]: The probabilites of these claases are [0.71409917, 0.7529667, 0.28243083, 0.034306355]
+[2022-07-28 18:20:05,738: INFO: infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\Multilabel\photos\image_012.jpg is [1, 1, 0, 0]
+[2022-07-28 18:20:05,738: INFO: infrence]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-07-28 18:26:10,922: INFO: trainning_03]: 
+********************
+[2022-07-28 18:26:10,922: INFO: trainning_03]: >>>>> stage create_model started <<<<<
+[2022-07-28 18:26:10,922: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-28 18:26:10,922: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-28 18:26:10,922: INFO: common]: created directory at: artifacts\Models
+[2022-07-28 18:26:10,922: INFO: common]: created directory at: artifacts\Trainning_data
+[2022-07-28 18:26:13,795: INFO: trainning_03]: The summary of the model is None
+[2022-07-28 18:35:13,289: INFO: trainning_03]: MOdel is build and saved at artifacts\Models\multioutput.h5
+[2022-07-28 18:35:13,289: INFO: trainning_03]: Callbacks are at logs directory and model is at artifacts\Models
+[2022-07-28 18:35:13,289: INFO: trainning_03]: Trainning Complete
+[2022-07-28 18:35:13,289: INFO: trainning_03]: >>>>> stage create_model completed!<<<<<
+
