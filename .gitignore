@@ -4,8 +4,6 @@ __pycache__/
 *$py.class
 Multilabel/
 artifacts/
-logs/train/
-logs/validation
 # C extensions
 *.so
 
