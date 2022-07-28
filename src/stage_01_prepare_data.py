@@ -1,11 +1,14 @@
 import argparse
 import os
 import logging
-from venv import create
 from src.utils.common import read_yaml, create_directories
-from src.utils.prepare import updated_label_img_name, rename_img_before_0_99, fix_wrong_img_text_index, save_to_csv, handle_nan_value
-import random
-
+from src.utils.prepare import(
+    updated_label_img_name,
+    rename_img_before_0_99, 
+    fix_wrong_img_text_index, 
+    save_to_csv,
+    handle_nan_value
+)
 
 STAGE = "Prepare_data" ## <<< change stage name 
 
