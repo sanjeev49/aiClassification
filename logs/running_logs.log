@@ -57,3 +57,34 @@
 [2022-07-28 21:56:44,786: INFO: stage_04_infrence_04]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\Multilabel\photos\image_012.jpg is [1, 1, 0, 0]
 [2022-07-28 21:56:44,786: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence completed!<<<<<
 
+[2022-07-28 22:15:31,643: INFO: stage_03_trainning_03]: 
+********************
+[2022-07-28 22:15:31,643: INFO: stage_03_trainning_03]: >>>>> stage create_model started <<<<<
+[2022-07-28 22:15:31,646: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-28 22:15:31,649: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-28 22:15:31,649: INFO: common]: created directory at: artifacts\model
+[2022-07-28 22:15:32,739: INFO: stage_03_trainning_03]: Training data is loaded from artifacts\training_data
+[2022-07-28 22:15:36,904: INFO: stage_03_trainning_03]: The summary of the model is None
+[2022-07-28 22:37:26,627: INFO: stage_03_trainning_03]: MOdel is build and saved at artifacts\model\resnet_50.h5
+[2022-07-28 22:37:26,628: INFO: stage_03_trainning_03]: Callbacks are at logs directory and model is at artifacts\model
+[2022-07-28 22:37:26,628: INFO: stage_03_trainning_03]: Trainning Complete
+[2022-07-28 22:37:26,631: INFO: stage_03_trainning_03]: >>>>> stage create_model completed!<<<<<
+
+[2022-07-28 22:49:26,603: INFO: stage_04_infrence_04]: 
+********************
+[2022-07-28 22:49:26,603: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence started <<<<<
+[2022-07-28 22:49:26,605: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-28 22:49:26,607: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-28 22:49:30,698: INFO: stage_04_infrence_04]: The probabilites of these claases are [0.86209434, 0.7292807, 0.2504383, 0.012149963]
+[2022-07-28 22:49:30,698: INFO: stage_04_infrence_04]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\Multilabel\photos\image_012.jpg is [1, 1, 0, 0]
+[2022-07-28 22:49:30,698: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-07-28 23:37:19,559: INFO: stage_04_infrence_04]: 
+********************
+[2022-07-28 23:37:19,560: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence started <<<<<
+[2022-07-28 23:37:19,565: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-28 23:37:19,568: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-28 23:37:24,811: INFO: stage_04_infrence_04]: The probabilites of these claases are [0.89043194, 0.7816554, 0.5030019, 0.08262967]
+[2022-07-28 23:37:24,811: INFO: stage_04_infrence_04]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\Multilabel\photos\image_968.jpg is [1, 1, 1, 0]
+[2022-07-28 23:37:24,811: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence completed!<<<<<
+

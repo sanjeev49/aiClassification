@@ -33,7 +33,7 @@ def prediction_model(config_path, params_path):
     raw_data_dir = os.path.join(root_dir, artifacts["RAW_DATA_DIR"])
     raw_img_dir = os.path.join(raw_data_dir, artifacts["RAW_IMAGE_DIR"])
     # Change it to any image from Multilabel/photos folder
-    img_path = os.path.join(raw_img_dir, "image_012.jpg")
+    img_path = os.path.join(raw_img_dir, "image_968.jpg")
 
     multioutput_resnet_model = os.path.join(model_dir, artifacts["BASE_MODEL_NAME"])
     model = load_keras_model(multioutput_resnet_model)

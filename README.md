@@ -64,7 +64,11 @@ In img_path give the path of the image that you want to get prediction.
 ```bash
 tensorboard --logdir ./logs
 ```
-
+## Data Augumentation
+For Data Augumentation We can use
+* changes in Angels, Rotation and lighting
+* Changes in Lighting and direction + Flipping about the vertical axis
+* Flipping about the horizontal axis and rotating by 90, 180, 270 degress. 
 
 ## Contributor <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" width=35 height=25> 
 - Sanjeev Kumar
