@@ -1,5 +1,5 @@
 # Multivariate Classification
-Mul
+Multivariate Classification
 
 ## STEPS -
 
