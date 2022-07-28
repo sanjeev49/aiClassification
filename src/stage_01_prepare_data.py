@@ -29,15 +29,15 @@ def prepare_data(config_path, params_path):
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
     prepare_data_dir = os.path.join(artifacts_dir, artifacts["PREPARED_DATA_DIR"])
-    create_directories([prepare_data_dir])
+    create_directories([artifacts_dir, prepare_data_dir])
 
     root_dir = os.getcwd()
-    raw_data_dir = os.path.join(root_dir, "Multilabel")
-    raw_label_file = os.path.join(raw_data_dir, "labels.txt")
-    raw_img_dir = os.path.join(raw_data_dir, "photos")
+    raw_data_dir = os.path.join(root_dir, artifacts["RAW_DATA_DIR"])
+    raw_label_file = os.path.join(raw_data_dir, artifacts["RAW_LABEL_FILE"])
+    raw_img_dir = os.path.join(raw_data_dir, artifacts["RAW_IMAGE_DIR"])
 
-    csv_w_nan = os.path.join(prepare_data_dir, "csv_w_nan.csv")
-    cleaned_csv = os.path.join(prepare_data_dir, 'cleaned.csv')
+    csv_w_nan = os.path.join(prepare_data_dir, artifacts["RAW_CSV_FILE"])
+    cleaned_csv = os.path.join(prepare_data_dir, artifacts["CLEANED_CSV_FILE"])
 
     update_label_val = updated_label_img_name(raw_label_file)
 

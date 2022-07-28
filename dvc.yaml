@@ -1,8 +1,29 @@
 #add stages here 
 stages:
-  stage_name:
-    cmd: python src/stage_01______.py
+  prepare_data:
+    cmd: python src/stage_01_prepare_data.py
     deps:
-    - src/stage_01______.py
+    - src/stage_01_prepare_data.py
+    - Multilabel/photos
+    - Multilabel/labels.txt
     outs:
-    - output_data_of_file_path
+    - artifacts/prepared/cleaned.csv
+    - artifacts/prepared/csv_with_nan.csv
+  convert_data:
+    cmd:  python src/stage_02_convert_data.py
+    deps:
+    - src/stage_02_convert_data.py
+    - Multilabel/photos
+    - artifacts/prepared/cleaned.csv
+    outs:
+    - artifacts/training_data/x_data.npy
+    - artifacts//training_data/y_data.npy
+  train_model:
+    cmd:  python src/stage_03_training.py
+    deps:
+    - src/stage_03_training.py
+    - artifacts/training_data/x_data.npy
+    - artifacts/training_data/y_data.npy
+    outs:
+    - artifacts/model/resnet_50.h5
+  

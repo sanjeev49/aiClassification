@@ -5,6 +5,7 @@ artifacts:
   RAW_DATA_DIR: Multilabel
   RAW_LABEL_FILE: labels.txt
   RAW_IMAGE_DIR:  photos
+  RAW_CSV_FILE: csv_with_nan.csv
   CLEANED_CSV_FILE: cleaned.csv
   PREPARED_DATA_DIR:  prepared
   TRAINING_DATA_DIR:  training_data
