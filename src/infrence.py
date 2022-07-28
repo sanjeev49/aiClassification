@@ -8,10 +8,9 @@ import os
 import logging
 from src.utils.common import read_yaml
 from src.utils.model import  load_keras_model, load_input_img, seperate_prediction
-from src.utils.callback import save_callback
 
 
-STAGE = "generate_infrence" ## <<< change stage name 
+STAGE = "generate_infrence" 
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -33,6 +32,7 @@ def prediction_model(config_path, params_path):
     root_dir = os.getcwd()
     raw_data_dir = os.path.join(root_dir, "Multilabel")
     raw_img_dir = os.path.join(raw_data_dir, "photos")
+    # Change it to any image from Multilabel/photos folder
     img_path = os.path.join(raw_img_dir, "image_012.jpg")
 
     multioutput = os.path.join(model_dir, "multioutput.h5")
