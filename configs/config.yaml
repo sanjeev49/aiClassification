@@ -2,7 +2,7 @@
 
 artifacts:
   ARTIFACTS_DIR: artifacts
-  RAW_DATA_DIR: Multilabel
+  RAW_DATA_DIR: data
   RAW_LABEL_FILE: labels.txt
   RAW_IMAGE_DIR:  photos
   RAW_CSV_FILE: csv_with_nan.csv

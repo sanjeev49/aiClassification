@@ -44,3 +44,17 @@
 [2022-07-29 01:13:22,899: INFO: common]: created directory at: artifacts\model
 [2022-07-29 01:13:23,130: INFO: stage_03_training]: Training data is loaded from artifacts\training_data
 [2022-07-29 01:13:26,326: INFO: stage_03_training]: The summary of the model is None
+[2022-07-29 02:44:32,771: INFO: stage_03_training]: MOdel is build and saved at artifacts\model\resnet_50.h5
+[2022-07-29 02:44:32,771: INFO: stage_03_training]: Callbacks are at logs directory and model is at artifacts\model
+[2022-07-29 02:44:32,771: INFO: stage_03_training]: Trainning Complete
+[2022-07-29 02:44:32,787: INFO: stage_03_training]: >>>>> stage train_model completed!<<<<<
+
+[2022-07-29 02:44:49,266: INFO: stage_04_infrence_04]: 
+********************
+[2022-07-29 02:44:49,266: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence started <<<<<
+[2022-07-29 02:44:49,268: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-29 02:44:49,270: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-07-29 02:44:53,058: INFO: stage_04_infrence_04]: The probabilites of these claases are [0.87036425, 0.5987868, 0.43338105, 0.08693082]
+[2022-07-29 02:44:53,059: INFO: stage_04_infrence_04]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 0, 0]
+[2022-07-29 02:44:53,059: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence completed!<<<<<
+

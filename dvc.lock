@@ -40,3 +40,19 @@ stages:
     - path: artifacts/training_data/x_data.npy
       md5: 6056462c3f26c503de36015168aeabfb
       size: 585252992
+  train_model:
+    cmd: python src/stage_03_training.py
+    deps:
+    - path: artifacts/training_data/x_data.npy
+      md5: 6056462c3f26c503de36015168aeabfb
+      size: 585252992
+    - path: artifacts/training_data/y_data.npy
+      md5: 099dd2f1c4a12b67f1f9dd0af183f83f
+      size: 31232
+    - path: src/stage_03_training.py
+      md5: 3a74cfa511a0aaab7ab08856fef7acc9
+      size: 3804
+    outs:
+    - path: artifacts/model/resnet_50.h5
+      md5: 2b99af5f6693a156883c84b616ec2ee3
+      size: 94806448
