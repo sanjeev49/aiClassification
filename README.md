@@ -49,7 +49,7 @@ $ pip install -e.
 
 ## 🎯 Inference demo
 
-1. Testing with **Images** (Put test inages in anywhere and give the location of this image to **img_path** parameter inside prediction model function )
+1. Testing with **Images** (Put test inages in anywhere and give the location of this image to **img_path** parameter inside prediction model function in src/infrence.py file)
 
 ![infrence_example](https://github.com/sanjeev49/aiClassification/blob/master/docs/img/infrence_example.png)
 
