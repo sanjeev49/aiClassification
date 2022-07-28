@@ -11,7 +11,9 @@
 - Download the dataset for custom training
 - https://drive.google.com/file/d/1mV7EP-maKTNu2RNv6wYRnaoON9dOqLNt/view?usp=sharing
 
+
 ## :desktop_computer:	Installation
+
 
 ### :hammer_and_wrench: Requirements
 * Python 3.8+
@@ -22,24 +24,31 @@
 * Os 
 
 
+
+
 ## :gear: Setup
-1. Install Tensorflow :-
+1. Create virtual enviroment
 ```bash
-$ pip3 install tensorflow
+$ conda create --prefix ./env python=3.8.13 -y
 ```
+2. Activate conda enviroment 
 ```bash
-$ pip3 install pandas
-
-```
-```bash
-$ pip3 install matplotlib
-
+$ conda activate ./env
 ```
 
+3. Install Required libraries
 ```bash
-$ pip3 install -e.
-
+$ pip install requirements.txt
 ```
+
+4. Run setup.py 
+```bash
+$ pip install -e.
+```
+5. Run src/infrence.py To get the prediction.
+
+
+
 ## 🎯 Inference demo
 1. Testing with **Images** ( Put test images in **AlphaPose/examples/demo/** )  :-
 ```bash
