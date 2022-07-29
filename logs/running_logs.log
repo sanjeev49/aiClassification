@@ -1,60 +1,123 @@
-[2022-07-29 01:13:06,139: INFO: stage_01_prepare_data]: 
+[2022-07-29 13:15:45,959: INFO: stage_01_prepare_data]: 
 ********************
-[2022-07-29 01:13:06,139: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
-[2022-07-29 01:13:06,139: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-07-29 01:13:06,145: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-07-29 01:13:06,145: INFO: common]: created directory at: artifacts
-[2022-07-29 01:13:06,145: INFO: common]: created directory at: artifacts\prepared
-[2022-07-29 01:13:06,168: INFO: prepare]: Nulll value in column a is 80: 
-[2022-07-29 01:13:06,168: INFO: prepare]: ***********************
-[2022-07-29 01:13:06,168: INFO: prepare]: Filling all the missing values with max, in column a The max value is 1.0
-[2022-07-29 01:13:06,168: INFO: prepare]: Filling values with for column a 
-[2022-07-29 01:13:06,168: INFO: prepare]: Nulll value in column b is 91: 
-[2022-07-29 01:13:06,168: INFO: prepare]: ***********************
-[2022-07-29 01:13:06,168: INFO: prepare]: Filling all the missing values with max, in column b The max value is 1.0
-[2022-07-29 01:13:06,168: INFO: prepare]: Filling values with for column b 
-[2022-07-29 01:13:06,168: INFO: prepare]: Nulll value in column c is 92: 
-[2022-07-29 01:13:06,168: INFO: prepare]: ***********************
-[2022-07-29 01:13:06,168: INFO: prepare]: Filling all the missing values with max, in column c The max value is 1.0
-[2022-07-29 01:13:06,168: INFO: prepare]: Filling values with for column c 
-[2022-07-29 01:13:06,170: INFO: prepare]: Nulll value in column d is 92: 
-[2022-07-29 01:13:06,170: INFO: prepare]: ***********************
-[2022-07-29 01:13:06,170: INFO: prepare]: Filling all the missing values with max, in column d The max value is 0.0
-[2022-07-29 01:13:06,170: INFO: prepare]: Filling values with for column d 
-[2022-07-29 01:13:06,170: INFO: prepare]: Dealt with missing values in the data
-[2022-07-29 01:13:06,170: INFO: prepare]: No values in the columns are 0 0 0 0 null now
-[2022-07-29 01:13:06,175: INFO: stage_01_prepare_data]: Handles Missing values and cleaned file is at location artifacts\prepared\cleaned.csv
-[2022-07-29 01:13:06,175: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+[2022-07-29 13:15:45,959: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-07-29 13:15:45,961: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-29 13:15:45,962: INFO: common]: created directory at: artifacts
+[2022-07-29 13:15:45,962: INFO: common]: created directory at: artifacts\prepared
+[2022-07-29 13:15:45,965: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-07-29 13:15:45,969: INFO: prepare]: All image file in ['image_000.jpg', 'image_001.jpg', 'image_002.jpg', 'image_003.jpg', 'image_004.jpg', 'image_005.jpg', 'image_006.jpg', 'image_007.jpg', 'image_008.jpg', 'image_009.jpg', 'image_010.jpg', 'image_011.jpg', 'image_012.jpg', 'image_013.jpg', 'image_014.jpg', 'image_015.jpg', 'image_016.jpg', 'image_017.jpg', 'image_018.jpg', 'image_019.jpg', 'image_020.jpg', 'image_021.jpg', 'image_022.jpg', 'image_023.jpg', 'image_024.jpg', 'image_025.jpg', 'image_026.jpg', 'image_027.jpg', 'image_028.jpg', 'image_029.jpg', 'image_030.jpg', 'image_031.jpg', 'image_032.jpg', 'image_033.jpg', 'image_034.jpg', 'image_035.jpg', 'image_036.jpg', 'image_037.jpg', 'image_038.jpg', 'image_039.jpg', 'image_040.jpg', 'image_041.jpg', 'image_042.jpg', 'image_043.jpg', 'image_044.jpg', 'image_045.jpg', 'image_046.jpg', 'image_047.jpg', 'image_048.jpg', 'image_049.jpg', 'image_050.jpg', 'image_051.jpg', 'image_052.jpg', 'image_053.jpg', 'image_054.jpg', 'image_055.jpg', 'image_056.jpg', 'image_057.jpg', 'image_058.jpg', 'image_059.jpg', 'image_060.jpg', 'image_061.jpg', 'image_062.jpg', 'image_063.jpg', 'image_064.jpg', 'image_065.jpg', 'image_066.jpg', 'image_067.jpg', 'image_068.jpg', 'image_069.jpg', 'image_070.jpg', 'image_071.jpg', 'image_072.jpg', 'image_073.jpg', 'image_074.jpg', 'image_075.jpg', 'image_076.jpg', 'image_077.jpg', 'image_078.jpg', 'image_079.jpg', 'image_080.jpg', 'image_081.jpg', 'image_082.jpg', 'image_083.jpg', 'image_084.jpg', 'image_085.jpg', 'image_086.jpg', 'image_087.jpg', 'image_088.jpg', 'image_089.jpg', 'image_090.jpg', 'image_091.jpg', 'image_092.jpg', 'image_093.jpg', 'image_094.jpg', 'image_095.jpg', 'image_096.jpg', 'image_097.jpg', 'image_098.jpg', 'image_099.jpg', 'image_100.jpg', 'image_101.jpg', 'image_102.jpg', 'image_103.jpg', 'image_104.jpg', 'image_105.jpg', 'image_106.jpg', 'image_107.jpg', 'image_108.jpg', 'image_109.jpg', 'image_110.jpg', 'image_111.jpg', 'image_112.jpg', 'image_113.jpg', 'image_114.jpg', 'image_115.jpg', 'image_116.jpg', 'image_117.jpg', 'image_118.jpg', 'image_119.jpg', 'image_120.jpg', 'image_121.jpg', 'image_122.jpg', 'image_123.jpg', 'image_124.jpg', 'image_125.jpg', 'image_126.jpg', 'image_127.jpg', 'image_128.jpg', 'image_129.jpg', 'image_130.jpg', 'image_131.jpg', 'image_132.jpg', 'image_133.jpg', 'image_134.jpg', 'image_135.jpg', 'image_136.jpg', 'image_137.jpg', 'image_138.jpg', 'image_139.jpg', 'image_140.jpg', 'image_141.jpg', 'image_142.jpg', 'image_143.jpg', 'image_144.jpg', 'image_145.jpg', 'image_146.jpg', 'image_147.jpg', 'image_148.jpg', 'image_149.jpg', 'image_150.jpg', 'image_151.jpg', 'image_152.jpg', 'image_153.jpg', 'image_154.jpg', 'image_155.jpg', 'image_156.jpg', 'image_157.jpg', 'image_158.jpg', 'image_159.jpg', 'image_160.jpg', 'image_161.jpg', 'image_162.jpg', 'image_163.jpg', 'image_164.jpg', 'image_165.jpg', 'image_166.jpg', 'image_167.jpg', 'image_168.jpg', 'image_169.jpg', 'image_170.jpg', 'image_171.jpg', 'image_172.jpg', 'image_173.jpg', 'image_174.jpg', 'image_175.jpg', 'image_176.jpg', 'image_177.jpg', 'image_178.jpg', 'image_179.jpg', 'image_180.jpg', 'image_181.jpg', 'image_182.jpg', 'image_183.jpg', 'image_184.jpg', 'image_185.jpg', 'image_186.jpg', 'image_187.jpg', 'image_188.jpg', 'image_189.jpg', 'image_190.jpg', 'image_191.jpg', 'image_192.jpg', 'image_193.jpg', 'image_194.jpg', 'image_195.jpg', 'image_196.jpg', 'image_197.jpg', 'image_198.jpg', 'image_199.jpg', 'image_200.jpg', 'image_201.jpg', 'image_202.jpg', 'image_203.jpg', 'image_204.jpg', 'image_205.jpg', 'image_206.jpg', 'image_207.jpg', 'image_208.jpg', 'image_209.jpg', 'image_210.jpg', 'image_211.jpg', 'image_212.jpg', 'image_213.jpg', 'image_214.jpg', 'image_215.jpg', 'image_216.jpg', 'image_217.jpg', 'image_218.jpg', 'image_219.jpg', 'image_220.jpg', 'image_221.jpg', 'image_222.jpg', 'image_223.jpg', 'image_224.jpg', 'image_225.jpg', 'image_226.jpg', 'image_227.jpg', 'image_228.jpg', 'image_229.jpg', 'image_230.jpg', 'image_231.jpg', 'image_232.jpg', 'image_233.jpg', 'image_234.jpg', 'image_235.jpg', 'image_236.jpg', 'image_237.jpg', 'image_238.jpg', 'image_239.jpg', 'image_240.jpg', 'image_241.jpg', 'image_242.jpg', 'image_243.jpg', 'image_244.jpg', 'image_245.jpg', 'image_246.jpg', 'image_247.jpg', 'image_248.jpg', 'image_249.jpg', 'image_250.jpg', 'image_251.jpg', 'image_252.jpg', 'image_253.jpg', 'image_254.jpg', 'image_255.jpg', 'image_256.jpg', 'image_257.jpg', 'image_258.jpg', 'image_259.jpg', 'image_260.jpg', 'image_261.jpg', 'image_262.jpg', 'image_263.jpg', 'image_264.jpg', 'image_265.jpg', 'image_266.jpg', 'image_267.jpg', 'image_268.jpg', 'image_269.jpg', 'image_270.jpg', 'image_271.jpg', 'image_272.jpg', 'image_273.jpg', 'image_274.jpg', 'image_275.jpg', 'image_276.jpg', 'image_277.jpg', 'image_278.jpg', 'image_279.jpg', 'image_280.jpg', 'image_281.jpg', 'image_282.jpg', 'image_283.jpg', 'image_284.jpg', 'image_285.jpg', 'image_286.jpg', 'image_287.jpg', 'image_288.jpg', 'image_289.jpg', 'image_290.jpg', 'image_291.jpg', 'image_292.jpg', 'image_293.jpg', 'image_294.jpg', 'image_295.jpg', 'image_296.jpg', 'image_297.jpg', 'image_298.jpg', 'image_299.jpg', 'image_300.jpg', 'image_301.jpg', 'image_302.jpg', 'image_303.jpg', 'image_304.jpg', 'image_305.jpg', 'image_306.jpg', 'image_307.jpg', 'image_308.jpg', 'image_309.jpg', 'image_310.jpg', 'image_311.jpg', 'image_312.jpg', 'image_313.jpg', 'image_314.jpg', 'image_315.jpg', 'image_316.jpg', 'image_317.jpg', 'image_318.jpg', 'image_319.jpg', 'image_320.jpg', 'image_321.jpg', 'image_322.jpg', 'image_323.jpg', 'image_324.jpg', 'image_325.jpg', 'image_326.jpg', 'image_327.jpg', 'image_328.jpg', 'image_329.jpg', 'image_330.jpg', 'image_331.jpg', 'image_332.jpg', 'image_333.jpg', 'image_334.jpg', 'image_335.jpg', 'image_336.jpg', 'image_337.jpg', 'image_338.jpg', 'image_339.jpg', 'image_340.jpg', 'image_341.jpg', 'image_342.jpg', 'image_343.jpg', 'image_344.jpg', 'image_345.jpg', 'image_346.jpg', 'image_347.jpg', 'image_348.jpg', 'image_349.jpg', 'image_350.jpg', 'image_351.jpg', 'image_352.jpg', 'image_353.jpg', 'image_354.jpg', 'image_355.jpg', 'image_356.jpg', 'image_357.jpg', 'image_358.jpg', 'image_359.jpg', 'image_360.jpg', 'image_361.jpg', 'image_362.jpg', 'image_363.jpg', 'image_364.jpg', 'image_365.jpg', 'image_366.jpg', 'image_367.jpg', 'image_368.jpg', 'image_369.jpg', 'image_370.jpg', 'image_371.jpg', 'image_372.jpg', 'image_373.jpg', 'image_374.jpg', 'image_375.jpg', 'image_376.jpg', 'image_377.jpg', 'image_378.jpg', 'image_379.jpg', 'image_380.jpg', 'image_381.jpg', 'image_382.jpg', 'image_383.jpg', 'image_384.jpg', 'image_385.jpg', 'image_386.jpg', 'image_387.jpg', 'image_388.jpg', 'image_389.jpg', 'image_390.jpg', 'image_391.jpg', 'image_392.jpg', 'image_393.jpg', 'image_394.jpg', 'image_395.jpg', 'image_396.jpg', 'image_397.jpg', 'image_398.jpg', 'image_399.jpg', 'image_400.jpg', 'image_401.jpg', 'image_402.jpg', 'image_403.jpg', 'image_404.jpg', 'image_405.jpg', 'image_406.jpg', 'image_407.jpg', 'image_408.jpg', 'image_409.jpg', 'image_410.jpg', 'image_411.jpg', 'image_412.jpg', 'image_413.jpg', 'image_414.jpg', 'image_415.jpg', 'image_416.jpg', 'image_417.jpg', 'image_418.jpg', 'image_419.jpg', 'image_420.jpg', 'image_421.jpg', 'image_422.jpg', 'image_423.jpg', 'image_424.jpg', 'image_425.jpg', 'image_426.jpg', 'image_427.jpg', 'image_428.jpg', 'image_429.jpg', 'image_430.jpg', 'image_431.jpg', 'image_432.jpg', 'image_433.jpg', 'image_434.jpg', 'image_435.jpg', 'image_436.jpg', 'image_437.jpg', 'image_438.jpg', 'image_439.jpg', 'image_440.jpg', 'image_441.jpg', 'image_442.jpg', 'image_443.jpg', 'image_444.jpg', 'image_445.jpg', 'image_446.jpg', 'image_447.jpg', 'image_448.jpg', 'image_449.jpg', 'image_450.jpg', 'image_451.jpg', 'image_452.jpg', 'image_453.jpg', 'image_454.jpg', 'image_455.jpg', 'image_456.jpg', 'image_457.jpg', 'image_458.jpg', 'image_459.jpg', 'image_460.jpg', 'image_461.jpg', 'image_462.jpg', 'image_463.jpg', 'image_464.jpg', 'image_465.jpg', 'image_466.jpg', 'image_467.jpg', 'image_468.jpg', 'image_469.jpg', 'image_470.jpg', 'image_471.jpg', 'image_472.jpg', 'image_473.jpg', 'image_474.jpg', 'image_475.jpg', 'image_476.jpg', 'image_477.jpg', 'image_478.jpg', 'image_479.jpg', 'image_480.jpg', 'image_481.jpg', 'image_482.jpg', 'image_483.jpg', 'image_484.jpg', 'image_485.jpg', 'image_486.jpg', 'image_487.jpg', 'image_488.jpg', 'image_490.jpg', 'image_491.jpg', 'image_492.jpg', 'image_493.jpg', 'image_494.jpg', 'image_495.jpg', 'image_496.jpg', 'image_497.jpg', 'image_498.jpg', 'image_499.jpg', 'image_500.jpg', 'image_501.jpg', 'image_502.jpg', 'image_503.jpg', 'image_504.jpg', 'image_505.jpg', 'image_506.jpg', 'image_507.jpg', 'image_508.jpg', 'image_509.jpg', 'image_510.jpg', 'image_511.jpg', 'image_512.jpg', 'image_513.jpg', 'image_514.jpg', 'image_515.jpg', 'image_516.jpg', 'image_517.jpg', 'image_518.jpg', 'image_519.jpg', 'image_520.jpg', 'image_521.jpg', 'image_522.jpg', 'image_523.jpg', 'image_524.jpg', 'image_525.jpg', 'image_526.jpg', 'image_527.jpg', 'image_528.jpg', 'image_529.jpg', 'image_530.jpg', 'image_531.jpg', 'image_532.jpg', 'image_533.jpg', 'image_534.jpg', 'image_535.jpg', 'image_536.jpg', 'image_537.jpg', 'image_538.jpg', 'image_539.jpg', 'image_540.jpg', 'image_541.jpg', 'image_542.jpg', 'image_543.jpg', 'image_544.jpg', 'image_545.jpg', 'image_546.jpg', 'image_547.jpg', 'image_548.jpg', 'image_549.jpg', 'image_550.jpg', 'image_551.jpg', 'image_552.jpg', 'image_553.jpg', 'image_554.jpg', 'image_555.jpg', 'image_556.jpg', 'image_557.jpg', 'image_558.jpg', 'image_559.jpg', 'image_560.jpg', 'image_561.jpg', 'image_562.jpg', 'image_563.jpg', 'image_564.jpg', 'image_565.jpg', 'image_566.jpg', 'image_567.jpg', 'image_568.jpg', 'image_569.jpg', 'image_570.jpg', 'image_571.jpg', 'image_572.jpg', 'image_573.jpg', 'image_574.jpg', 'image_575.jpg', 'image_576.jpg', 'image_577.jpg', 'image_578.jpg', 'image_579.jpg', 'image_580.jpg', 'image_581.jpg', 'image_582.jpg', 'image_583.jpg', 'image_584.jpg', 'image_585.jpg', 'image_586.jpg', 'image_587.jpg', 'image_588.jpg', 'image_589.jpg', 'image_590.jpg', 'image_591.jpg', 'image_592.jpg', 'image_593.jpg', 'image_594.jpg', 'image_595.jpg', 'image_596.jpg', 'image_597.jpg', 'image_598.jpg', 'image_599.jpg', 'image_600.jpg', 'image_601.jpg', 'image_602.jpg', 'image_603.jpg', 'image_604.jpg', 'image_605.jpg', 'image_606.jpg', 'image_607.jpg', 'image_608.jpg', 'image_609.jpg', 'image_610.jpg', 'image_611.jpg', 'image_612.jpg', 'image_613.jpg', 'image_614.jpg', 'image_615.jpg', 'image_616.jpg', 'image_617.jpg', 'image_618.jpg', 'image_619.jpg', 'image_620.jpg', 'image_621.jpg', 'image_622.jpg', 'image_623.jpg', 'image_625.jpg', 'image_626.jpg', 'image_627.jpg', 'image_628.jpg', 'image_629.jpg', 'image_630.jpg', 'image_631.jpg', 'image_632.jpg', 'image_633.jpg', 'image_634.jpg', 'image_635.jpg', 'image_636.jpg', 'image_637.jpg', 'image_638.jpg', 'image_639.jpg', 'image_640.jpg', 'image_641.jpg', 'image_642.jpg', 'image_643.jpg', 'image_644.jpg', 'image_645.jpg', 'image_646.jpg', 'image_647.jpg', 'image_648.jpg', 'image_649.jpg', 'image_650.jpg', 'image_651.jpg', 'image_652.jpg', 'image_653.jpg', 'image_654.jpg', 'image_655.jpg', 'image_656.jpg', 'image_657.jpg', 'image_658.jpg', 'image_659.jpg', 'image_660.jpg', 'image_661.jpg', 'image_662.jpg', 'image_663.jpg', 'image_664.jpg', 'image_665.jpg', 'image_666.jpg', 'image_667.jpg', 'image_668.jpg', 'image_669.jpg', 'image_670.jpg', 'image_671.jpg', 'image_672.jpg', 'image_673.jpg', 'image_674.jpg', 'image_675.jpg', 'image_676.jpg', 'image_677.jpg', 'image_678.jpg', 'image_679.jpg', 'image_680.jpg', 'image_681.jpg', 'image_682.jpg', 'image_683.jpg', 'image_684.jpg', 'image_685.jpg', 'image_686.jpg', 'image_687.jpg', 'image_688.jpg', 'image_689.jpg', 'image_690.jpg', 'image_691.jpg', 'image_692.jpg', 'image_693.jpg', 'image_694.jpg', 'image_695.jpg', 'image_696.jpg', 'image_697.jpg', 'image_698.jpg', 'image_699.jpg', 'image_700.jpg', 'image_701.jpg', 'image_702.jpg', 'image_703.jpg', 'image_704.jpg', 'image_705.jpg', 'image_706.jpg', 'image_707.jpg', 'image_708.jpg', 'image_709.jpg', 'image_710.jpg', 'image_711.jpg', 'image_712.jpg', 'image_713.jpg', 'image_714.jpg', 'image_715.jpg', 'image_716.jpg', 'image_717.jpg', 'image_718.jpg', 'image_719.jpg', 'image_720.jpg', 'image_721.jpg', 'image_722.jpg', 'image_723.jpg', 'image_724.jpg', 'image_725.jpg', 'image_726.jpg', 'image_727.jpg', 'image_728.jpg', 'image_729.jpg', 'image_730.jpg', 'image_731.jpg', 'image_732.jpg', 'image_733.jpg', 'image_734.jpg', 'image_735.jpg', 'image_736.jpg', 'image_737.jpg', 'image_738.jpg', 'image_739.jpg', 'image_740.jpg', 'image_741.jpg', 'image_742.jpg', 'image_743.jpg', 'image_744.jpg', 'image_745.jpg', 'image_746.jpg', 'image_747.jpg', 'image_748.jpg', 'image_749.jpg', 'image_750.jpg', 'image_751.jpg', 'image_752.jpg', 'image_753.jpg', 'image_754.jpg', 'image_755.jpg', 'image_756.jpg', 'image_757.jpg', 'image_758.jpg', 'image_759.jpg', 'image_760.jpg', 'image_761.jpg', 'image_762.jpg', 'image_763.jpg', 'image_764.jpg', 'image_765.jpg', 'image_766.jpg', 'image_767.jpg', 'image_768.jpg', 'image_769.jpg', 'image_770.jpg', 'image_771.jpg', 'image_772.jpg', 'image_773.jpg', 'image_774.jpg', 'image_775.jpg', 'image_776.jpg', 'image_777.jpg', 'image_778.jpg', 'image_779.jpg', 'image_780.jpg', 'image_781.jpg', 'image_782.jpg', 'image_783.jpg', 'image_784.jpg', 'image_785.jpg', 'image_786.jpg', 'image_787.jpg', 'image_788.jpg', 'image_789.jpg', 'image_790.jpg', 'image_791.jpg', 'image_792.jpg', 'image_793.jpg', 'image_794.jpg', 'image_795.jpg', 'image_796.jpg', 'image_797.jpg', 'image_798.jpg', 'image_799.jpg', 'image_800.jpg', 'image_801.jpg', 'image_802.jpg', 'image_803.jpg', 'image_804.jpg', 'image_805.jpg', 'image_806.jpg', 'image_807.jpg', 'image_808.jpg', 'image_809.jpg', 'image_810.jpg', 'image_811.jpg', 'image_812.jpg', 'image_813.jpg', 'image_814.jpg', 'image_815.jpg', 'image_816.jpg', 'image_817.jpg', 'image_818.jpg', 'image_819.jpg', 'image_820.jpg', 'image_821.jpg', 'image_822.jpg', 'image_823.jpg', 'image_824.jpg', 'image_825.jpg', 'image_826.jpg', 'image_827.jpg', 'image_828.jpg', 'image_829.jpg', 'image_830.jpg', 'image_831.jpg', 'image_832.jpg', 'image_833.jpg', 'image_834.jpg', 'image_835.jpg', 'image_836.jpg', 'image_837.jpg', 'image_838.jpg', 'image_839.jpg', 'image_840.jpg', 'image_841.jpg', 'image_842.jpg', 'image_843.jpg', 'image_844.jpg', 'image_845.jpg', 'image_846.jpg', 'image_847.jpg', 'image_848.jpg', 'image_849.jpg', 'image_850.jpg', 'image_851.jpg', 'image_852.jpg', 'image_853.jpg', 'image_854.jpg', 'image_855.jpg', 'image_856.jpg', 'image_857.jpg', 'image_858.jpg', 'image_859.jpg', 'image_860.jpg', 'image_861.jpg', 'image_862.jpg', 'image_863.jpg', 'image_864.jpg', 'image_865.jpg', 'image_866.jpg', 'image_867.jpg', 'image_868.jpg', 'image_869.jpg', 'image_870.jpg', 'image_871.jpg', 'image_872.jpg', 'image_873.jpg', 'image_874.jpg', 'image_876.jpg', 'image_877.jpg', 'image_878.jpg', 'image_879.jpg', 'image_880.jpg', 'image_881.jpg', 'image_882.jpg', 'image_883.jpg', 'image_884.jpg', 'image_885.jpg', 'image_886.jpg', 'image_887.jpg', 'image_888.jpg', 'image_889.jpg', 'image_890.jpg', 'image_891.jpg', 'image_892.jpg', 'image_893.jpg', 'image_894.jpg', 'image_895.jpg', 'image_896.jpg', 'image_897.jpg', 'image_898.jpg', 'image_899.jpg', 'image_900.jpg', 'image_901.jpg', 'image_902.jpg', 'image_903.jpg', 'image_904.jpg', 'image_905.jpg', 'image_906.jpg', 'image_907.jpg', 'image_908.jpg', 'image_909.jpg', 'image_910.jpg', 'image_911.jpg', 'image_912.jpg', 'image_913.jpg', 'image_914.jpg', 'image_915.jpg', 'image_916.jpg', 'image_917.jpg', 'image_918.jpg', 'image_919.jpg', 'image_920.jpg', 'image_921.jpg', 'image_922.jpg', 'image_923.jpg', 'image_924.jpg', 'image_925.jpg', 'image_926.jpg', 'image_927.jpg', 'image_928.jpg', 'image_929.jpg', 'image_930.jpg', 'image_931.jpg', 'image_932.jpg', 'image_933.jpg', 'image_934.jpg', 'image_935.jpg', 'image_936.jpg', 'image_937.jpg', 'image_938.jpg', 'image_939.jpg', 'image_940.jpg', 'image_941.jpg', 'image_942.jpg', 'image_943.jpg', 'image_944.jpg', 'image_945.jpg', 'image_946.jpg', 'image_947.jpg', 'image_948.jpg', 'image_949.jpg', 'image_950.jpg', 'image_951.jpg', 'image_952.jpg', 'image_953.jpg', 'image_954.jpg', 'image_955.jpg', 'image_956.jpg', 'image_957.jpg', 'image_958.jpg', 'image_959.jpg', 'image_960.jpg', 'image_961.jpg', 'image_962.jpg', 'image_963.jpg', 'image_964.jpg', 'image_965.jpg', 'image_966.jpg', 'image_967.jpg', 'image_968.jpg', 'image_969.jpg', 'image_970.jpg', 'image_971.jpg', 'image_972.jpg', 'image_973.jpg', 'image_974.jpg'] folders are renamed with correct format. 
+[2022-07-29 13:15:45,969: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-07-29 13:15:45,971: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
 
-[2022-07-29 01:13:10,987: INFO: stage_02_convert_data]: 
+[2022-07-29 13:37:27,850: INFO: stage_01_prepare_data]: 
 ********************
-[2022-07-29 01:13:10,987: INFO: stage_02_convert_data]: >>>>> stage create_model started <<<<<
-[2022-07-29 01:13:10,987: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-07-29 01:13:10,987: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-07-29 01:13:10,987: INFO: common]: created directory at: artifacts\training_data
-[2022-07-29 01:13:10,987: INFO: stage_02_convert_data]: Tranning data does not found creating one at location artifacts\training_data
-[2022-07-29 01:13:16,252: INFO: stage_02_convert_data]: Trinning data has been saved at location artifacts\training_data
-[2022-07-29 01:13:16,318: INFO: stage_02_convert_data]: >>>>> stage create_model completed!<<<<<
+[2022-07-29 13:37:27,850: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-07-29 13:37:27,850: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-29 13:37:27,850: INFO: common]: created directory at: artifacts
+[2022-07-29 13:37:27,850: INFO: common]: created directory at: artifacts\prepared
+[2022-07-29 13:37:27,850: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-07-29 13:37:27,865: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-07-29 13:37:27,865: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-07-29 13:37:27,865: INFO: prepare]: something gone wrong <class 'Exception'>
+[2022-07-29 13:37:27,865: ERROR: stage_01_prepare_data]: 
+Traceback (most recent call last):
+  File "c:\users\sanjeev\documents\aiclassification\src\utils\prepare.py", line 130, in save_to_csv
+    for i in li:
+NameError: name 'li' is not defined
 
-[2022-07-29 01:13:22,893: INFO: stage_03_training]: 
-********************
-[2022-07-29 01:13:22,893: INFO: stage_03_training]: >>>>> stage train_model started <<<<<
-[2022-07-29 01:13:22,898: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-07-29 01:13:22,899: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-07-29 01:13:22,899: INFO: common]: created directory at: artifacts\model
-[2022-07-29 01:13:23,130: INFO: stage_03_training]: Training data is loaded from artifacts\training_data
-[2022-07-29 01:13:26,326: INFO: stage_03_training]: The summary of the model is None
-[2022-07-29 02:44:32,771: INFO: stage_03_training]: MOdel is build and saved at artifacts\model\resnet_50.h5
-[2022-07-29 02:44:32,771: INFO: stage_03_training]: Callbacks are at logs directory and model is at artifacts\model
-[2022-07-29 02:44:32,771: INFO: stage_03_training]: Trainning Complete
-[2022-07-29 02:44:32,787: INFO: stage_03_training]: >>>>> stage train_model completed!<<<<<
+During handling of the above exception, another exception occurred:
 
-[2022-07-29 02:44:49,266: INFO: stage_04_infrence_04]: 
+Traceback (most recent call last):
+  File ".\src\stage_01_prepare_data.py", line 81, in <module>
+    prepare_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File ".\src\stage_01_prepare_data.py", line 47, in prepare_data
+    prepdata.save_to_csv(updated_label_img_name=updated_label_img_name)
+  File "c:\users\sanjeev\documents\aiclassification\src\utils\prepare.py", line 141, in save_to_csv
+    raise Exception
+Exception
+[2022-07-29 13:38:28,076: INFO: stage_01_prepare_data]: 
 ********************
-[2022-07-29 02:44:49,266: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence started <<<<<
-[2022-07-29 02:44:49,268: INFO: common]: yaml file: configs/config.yaml loaded successfully
-[2022-07-29 02:44:49,270: INFO: common]: yaml file: params.yaml loaded successfully
-[2022-07-29 02:44:53,058: INFO: stage_04_infrence_04]: The probabilites of these claases are [0.87036425, 0.5987868, 0.43338105, 0.08693082]
-[2022-07-29 02:44:53,059: INFO: stage_04_infrence_04]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 0, 0]
-[2022-07-29 02:44:53,059: INFO: stage_04_infrence_04]: >>>>> stage generate_infrence completed!<<<<<
+[2022-07-29 13:38:28,076: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-07-29 13:38:28,092: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-29 13:38:28,092: INFO: common]: created directory at: artifacts
+[2022-07-29 13:38:28,092: INFO: common]: created directory at: artifacts\prepared
+[2022-07-29 13:38:28,092: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-07-29 13:38:28,092: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-07-29 13:38:28,092: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-07-29 13:38:28,092: INFO: prepare]: something gone wrong <class 'Exception'>
+[2022-07-29 13:38:28,092: ERROR: stage_01_prepare_data]: 
+Traceback (most recent call last):
+  File "c:\users\sanjeev\documents\aiclassification\src\utils\prepare.py", line 130, in save_to_csv
+    for i in li:
+NameError: name 'li' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ".\src\stage_01_prepare_data.py", line 81, in <module>
+    prepare_data(config_path=parsed_args.config, params_path=parsed_args.params)
+  File ".\src\stage_01_prepare_data.py", line 47, in prepare_data
+    prepdata.save_to_csv(updated_label_img_name=updated_label_acc_img)
+  File "c:\users\sanjeev\documents\aiclassification\src\utils\prepare.py", line 141, in save_to_csv
+    raise Exception
+Exception
+[2022-07-29 13:39:37,254: INFO: stage_01_prepare_data]: 
+********************
+[2022-07-29 13:39:37,254: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-07-29 13:39:37,270: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-29 13:39:37,270: INFO: common]: created directory at: artifacts
+[2022-07-29 13:39:37,270: INFO: common]: created directory at: artifacts\prepared
+[2022-07-29 13:39:37,270: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-07-29 13:39:37,270: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-07-29 13:39:37,270: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-07-29 13:39:37,301: INFO: prepare]: Image name removed from file and saved it as DataFrame at artifacts\prepared\csv_with_nan.csv
+[2022-07-29 13:39:37,316: INFO: prepare]: Null value in column a is 80: 
+[2022-07-29 13:39:37,316: INFO: prepare]: ***********************
+[2022-07-29 13:39:37,316: INFO: prepare]: Filling all the missing values with max, in column a The max value is 1.0
+[2022-07-29 13:39:37,316: INFO: prepare]: Filling values with for column a 
+[2022-07-29 13:39:37,316: INFO: prepare]: Null value in column b is 91: 
+[2022-07-29 13:39:37,316: INFO: prepare]: ***********************
+[2022-07-29 13:39:37,332: INFO: prepare]: Filling all the missing values with max, in column b The max value is 1.0
+[2022-07-29 13:39:37,332: INFO: prepare]: Filling values with for column b 
+[2022-07-29 13:39:37,332: INFO: prepare]: Null value in column c is 92: 
+[2022-07-29 13:39:37,332: INFO: prepare]: ***********************
+[2022-07-29 13:39:37,332: INFO: prepare]: Filling all the missing values with max, in column c The max value is 1.0
+[2022-07-29 13:39:37,332: INFO: prepare]: Filling values with for column c 
+[2022-07-29 13:39:37,332: INFO: prepare]: Null value in column d is 92: 
+[2022-07-29 13:39:37,332: INFO: prepare]: ***********************
+[2022-07-29 13:39:37,332: INFO: prepare]: Filling all the missing values with max, in column d The max value is 0.0
+[2022-07-29 13:39:37,332: INFO: prepare]: Filling values with for column d 
+[2022-07-29 13:39:37,332: INFO: prepare]: Dealt with missing values in the data
+[2022-07-29 13:39:37,332: INFO: prepare]: Checking Null found 0 0 0 0 values.
+[2022-07-29 13:39:37,332: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2022-07-29 13:40:14,872: INFO: stage_01_prepare_data]: 
+********************
+[2022-07-29 13:40:14,872: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-07-29 13:40:14,872: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-07-29 13:40:14,872: INFO: common]: created directory at: artifacts
+[2022-07-29 13:40:14,872: INFO: common]: created directory at: artifacts\prepared
+[2022-07-29 13:40:14,872: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-07-29 13:40:14,872: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-07-29 13:40:14,872: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-07-29 13:40:14,887: INFO: prepare]: Image name removed from file and saved it as DataFrame at artifacts\prepared\csv_with_nan.csv
+[2022-07-29 13:40:14,887: INFO: prepare]: Null value in column a is 80: 
+[2022-07-29 13:40:14,887: INFO: prepare]: ***********************
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling all the missing values with max, in column a The max value is 1.0
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling values with for column a 
+[2022-07-29 13:40:14,887: INFO: prepare]: Null value in column b is 91: 
+[2022-07-29 13:40:14,887: INFO: prepare]: ***********************
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling all the missing values with max, in column b The max value is 1.0
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling values with for column b 
+[2022-07-29 13:40:14,887: INFO: prepare]: Null value in column c is 92: 
+[2022-07-29 13:40:14,887: INFO: prepare]: ***********************
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling all the missing values with max, in column c The max value is 1.0
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling values with for column c 
+[2022-07-29 13:40:14,887: INFO: prepare]: Null value in column d is 92: 
+[2022-07-29 13:40:14,887: INFO: prepare]: ***********************
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling all the missing values with max, in column d The max value is 0.0
+[2022-07-29 13:40:14,887: INFO: prepare]: Filling values with for column d 
+[2022-07-29 13:40:14,887: INFO: prepare]: Dealt with missing values in the data
+[2022-07-29 13:40:14,887: INFO: prepare]: Checking Null found 0 0 0 0 values.
+[2022-07-29 13:40:14,903: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
 
