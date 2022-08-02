@@ -1,6 +1,11 @@
 # Multivariate Classification
 Multivariate Classification
 
+## 📝 Description
+- This implementation is based on official **resnet50** 
+- In this project we have used **Pretrained Model** and **tensorboard** for image classification and checking the accuracy of the model.
+
+
 ## STEPS -
 
 
@@ -10,13 +15,6 @@ Multivariate Classification
 conda create --prefix ./env python=3.8.13 -y
 ```
 
-```bash
-conda activate ./env
-```
-OR
-```bash
-source activate ./env
-```
 
 ### STEP 02- install the requirements
 ```bash
@@ -32,9 +30,6 @@ It will run for 100 Epochs. You can change this into params.yaml section for the
 - This repository represents **" MultiVariate Classification  "**.
 - With the help of this project we can Classifiy 4 Attributes of An Image .
   
-## 📝 Description
-- This implemantation is based on official **resnet50** 
-- In this project we have used **Pretrained Model** and **tensorboard** for image classification and checking the accuracy of the model.
 
 ## ⏳ Dataset
 - Download the dataset for custom training
@@ -56,26 +51,34 @@ It will run for 100 Epochs. You can change this into params.yaml section for the
 
 
 ## :gear: Setup
-1. Create virtual enviroment
+1. Create virtual environment.
 ```bash
 $ conda create --prefix ./env python=3.8.13 -y
 ```
-2. Activate conda enviroment 
+2. Activate virtual enviroment. 
 ```bash
-$ conda activate ./env
+conda activate ./env
 ```
-
-3. Install Required libraries
+OR
 ```bash
-$ pip install requirements.txt
+$ source activate ./env
 ```
 
 4. Run setup.py 
 ```bash
 $ pip install -e.
 ```
-5. Run src/infrence.py To get the prediction.
-
+5. Initialize `DVC` 
+```
+$ dvc init
+```
+6. Run All the steps for DVC
+```
+$ dvc repro
+```
+After that our model will trained on the given dataset for 10 epochs.
+We can modify the parameters in the `params.yaml` file in the root 
+directory of the folder. 
 ## 🎯 Inference demo
 
 1. Testing with **Images** (Put test inages in anywhere and give the location of this image to **img_path** parameter inside prediction model function in src/infrence.py file)
