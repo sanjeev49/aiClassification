@@ -2,15 +2,9 @@ import argparse
 import os
 import logging
 from src.utils.common import read_yaml, create_directories
-from src.utils.prepare import(
-    updated_label_img_name,
-    rename_img_before_0_99, 
-    fix_wrong_img_text_index, 
-    save_to_csv,
-    handle_nan_value
-)
+from src.utils.prepare import prepareData
 
-STAGE = "Prepare_data" ## <<< change stage name 
+STAGE = "Prepare_data"
 
 logging.basicConfig(
     filename=os.path.join("logs", 'running_logs.log'), 
@@ -21,10 +15,9 @@ logging.basicConfig(
 
 
 def prepare_data(config_path, params_path):
-    ## read config files
+    # read config files
     config = read_yaml(config_path)
-    params = read_yaml(params_path)
-    
+    # Initialize the Class
     artifacts = config["artifacts"]
     artifacts_dir = artifacts["ARTIFACTS_DIR"]
 
@@ -39,26 +32,41 @@ def prepare_data(config_path, params_path):
     csv_w_nan = os.path.join(prepare_data_dir, artifacts["RAW_CSV_FILE"])
     cleaned_csv = os.path.join(prepare_data_dir, artifacts["CLEANED_CSV_FILE"])
 
-    update_label_val = updated_label_img_name(raw_label_file)
+    # Creating Object of prepData Class
+    prepdata = prepareData(img_dir=raw_img_dir, label_file=raw_label_file, csv_w_nan_location=csv_w_nan,
+                           cleaned_csv_location=cleaned_csv)
 
-    rename_img_before_0_99(raw_img_dir)
+    updated_label_img_name = prepdata.updated_label_img_name()
+    prepdata.rename_img_before_0_99()
+    updated_label_acc_img = prepdata.fix_wrong_img_text_index(updated_label_img_list=updated_label_img_name)
 
-    a = fix_wrong_img_text_index(os.listdir(raw_img_dir), update_label_val)
+    # Asserting for image_dir image_name and label_file image_name
+    for img_name, text_data in zip(os.listdir(raw_img_dir), updated_label_acc_img):
+        assert img_name == text_data[0]
+    # Removing Image name from label file for creating training data
+    prepdata.save_to_csv(updated_label_img_name=updated_label_acc_img)
+    # Handling Nan Values
+    prepdata.handle_nan_value()
+
+
+    #
+    # update_label_val = updated_label_img_name(raw_label_file)
+    #
+    # rename_img_before_0_99(raw_img_dir)
+    #
+    # a = fix_wrong_img_text_index(os.listdir(raw_img_dir), update_label_val)
 
     # checking for equality of image and label
 
-    for img, data in zip(os.listdir(raw_img_dir ), a):
-        assert img == data[0]
-    # Save clean label to pandas dataframe to handle nan vaules
-    save_to_csv(a, csv_w_nan)
-    
-    # Handling NaN in labels
-    handle_nan_value(csv_w_nan, cleaned_csv)
-
-    logging.info("Handles Missing values and cleaned file is at location {}".format(cleaned_csv))
-
-
-
+    # for img, data in zip(os.listdir(raw_img_dir ), a):
+    #     assert img == data[0]
+    # # Save clean label to pandas dataframe to handle nan vaules
+    # save_to_csv(a, csv_w_nan)
+    #
+    # # Handling NaN in labels
+    # handle_nan_value(csv_w_nan, cleaned_csv)
+    #
+    # logging.info("Handles Missing values and cleaned file is at location {}".format(cleaned_csv))
 
 
 if __name__ == '__main__':

@@ -1,16 +1,16 @@
-echo [$(date)]: "START"
-echo [$(date)]: "creating environment"
+echo "[$(date)]": "START"
+echo "[$(date)]": "creating environment"
 conda create --prefix ./env python=3.7 -y
-echo [$(date)]: "activate environment"
+echo "[$(date)]": "activate environment"
 source activate ./env
-echo [$(date)]: "install requirements"
+echo "[$(date)]": "install requirements"
 pip install -r requirements.txt
-echo [$(date)]: "export conda environment"
+echo "[$(date)]": "export conda environment"
 echo "# ${PWD}" > README.md
-echo [$(date)]: "first commit"
+echo "[$(date)]": "first commit"
 git add .
 git commit -m "first commit"
-echo [$(date)]: "END"
+echo "[$(date)]": "END"
 
 # to remove everything -
 # rm -rf env/ .gitignore conda.yaml README.md .git/
