@@ -15,7 +15,7 @@ class prepareData:
 
     def __init__(self, img_dir: str, label_file: str, csv_w_nan_location: str, cleaned_csv_location: str):
         self.img_dir_name = img_dir
-        self.img_dir = os.listdir(img_dir)
+        self.img_dir_list = os.listdir(img_dir)
         self.label_file = label_file
         self.csv_w_nan_location = csv_w_nan_location
         self.cleaned_csv_location = cleaned_csv_location
@@ -32,9 +32,9 @@ class prepareData:
         """
         try:
             with open(self.label_file, 'r') as f:
-                f = f.readlines()
+                label_list = f.readlines()
             updated_list = []
-            for i in f:
+            for i in label_list:
                 split_val = i.split()
                 img_var = split_val[0]
                 img_raw_name, jpg_raw_name = img_var.split(".")[0], img_var.split(".")[1]
@@ -57,6 +57,8 @@ class prepareData:
         except Exception:
             logging.info(f"Something bad happens \n {Exception}")
             raise Exception
+        finally:
+            f.close()
 
     def rename_img_before_0_99(self) -> None:
         """
@@ -70,7 +72,7 @@ class prepareData:
         Revisions: None
         """
         try:
-            for img in self.img_dir:
+            for img in self.img_dir_list:
                 path = os.path.join(self.img_dir_name, img)
                 img_, acc = path.split("_")[0], path.split("_")[1]
                 num_, replace = acc.split(".")[0], acc.split(".")[1]
@@ -106,7 +108,7 @@ class prepareData:
         """
         try:
             for i in range(970):
-                if self.img_dir[i] != updated_label_img_list[i][0]:
+                if self.img_dir_list[i] != updated_label_img_list[i][0]:
                     del updated_label_img_list[i]
             logging.info("All incorrect index position with compare to image and index are fixed. ")
             return updated_label_img_list

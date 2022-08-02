@@ -5,6 +5,8 @@ __pycache__/
 data/
 artifacts/
 # C extensions
+dvc.lock
+.dvc
 *.so
 
 # Distribution / packaging

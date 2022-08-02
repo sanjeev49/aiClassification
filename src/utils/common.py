@@ -1,8 +1,6 @@
 import os
 import yaml
 import logging
-import time
-import pandas as pd
 import json
 
 def read_yaml(path_to_yaml: str) -> dict:

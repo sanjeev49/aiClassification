@@ -9,7 +9,7 @@ artifacts:
   CLEANED_CSV_FILE: cleaned.csv
   PREPARED_DATA_DIR:  prepared
   TRAINING_DATA_DIR:  training_data
-  LABEL_TRAING_DATA:  y_data.npy
+  LABEL_TRAINING_DATA:  y_data.npy
   IMG_TRAINING_DATA:  x_data.npy
   TRAINED_MODEL_DIR: model
   BASE_MODEL_NAME: resnet_50.h5

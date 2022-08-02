@@ -1,11 +1,11 @@
 #add stages here 
 stages:
   prepare_data:
-    cmd: python src/stage_01_prepare_data.py
+    cmd: python src/stage_01_load_prepare_data.py
     deps:
-    - src/stage_01_prepare_data.py
-    - Multilabel/photos
-    - Multilabel/labels.txt
+    - src/stage_01_load_prepare_data.py
+    - data/photos
+    - data/labels.txt
     outs:
     - artifacts/prepared/cleaned.csv
     - artifacts/prepared/csv_with_nan.csv
@@ -13,11 +13,11 @@ stages:
     cmd:  python src/stage_02_convert_data.py
     deps:
     - src/stage_02_convert_data.py
-    - Multilabel/photos
+    - data/photos
     - artifacts/prepared/cleaned.csv
     outs:
     - artifacts/training_data/x_data.npy
-    - artifacts//training_data/y_data.npy
+    - artifacts/training_data/y_data.npy
   train_model:
     cmd:  python src/stage_03_training.py
     deps:
