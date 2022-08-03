@@ -1,4 +1,4 @@
-from setuptools import setup,find_packages
+from setuptools import setup, find_packages
 from typing import List
 
 with open("README.md", "r", encoding="utf-8") as f:
@@ -8,7 +8,7 @@ REPO_NAME = "aiClassification"
 AUTHOR_USER_NAME = "sanjeev49"
 SRC_REPO = "src"
 
-REQUIREMENT_FILE_NAME="requirements.txt"
+REQUIREMENT_FILE_NAME = "requirements.txt"
 
 HYPHEN_E_DOT = "-e ."
 
@@ -30,7 +30,7 @@ def get_requirements_list() -> List[str]:
 
 setup(
     name=SRC_REPO,
-    version="0.0.1",
+    version="0.0.2",
     author=AUTHOR_USER_NAME,
     description="A small package for DVC",
     long_description=long_description,

@@ -118,7 +118,7 @@ class loadData:
             logging.info(f"Something Bad Happens. {Exception}")
             raise Exception
 
-    def load_keras_model(self):
+    def load_keras_model(self)-> list:
         """
         Method Name: load_keras_model
         Description: This method Loads Keras Model from the given file and return the tensorflow model

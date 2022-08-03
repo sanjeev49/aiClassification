@@ -150,3 +150,55 @@ NameError: name 'multioutput_model' is not defined
 [2022-08-02 05:31:13,049: INFO: stage_03_training]: Training Complete
 [2022-08-02 05:31:13,049: INFO: stage_03_training]: >>>>> stage training_model completed!<<<<<
 
+[2022-08-02 08:23:23,952: INFO: stage_01_load_prepare_data]: 
+********************
+[2022-08-02 08:23:23,952: INFO: stage_01_load_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-08-02 08:23:23,952: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-02 08:23:23,952: INFO: common]: created directory at: artifacts
+[2022-08-02 08:23:23,952: INFO: common]: created directory at: artifacts\prepared
+[2022-08-02 08:23:23,952: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-08-02 08:23:23,952: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-08-02 08:23:23,952: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-08-02 08:23:23,967: INFO: prepare]: Image name removed from file and saved it as DataFrame at artifacts\prepared\csv_with_nan.csv
+[2022-08-02 08:23:23,983: INFO: prepare]: Null value in column a is 80: 
+[2022-08-02 08:23:23,983: INFO: prepare]: ***********************
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling all the missing values with max, in column a The max value is 1.0
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling values with for column a 
+[2022-08-02 08:23:23,983: INFO: prepare]: Null value in column b is 91: 
+[2022-08-02 08:23:23,983: INFO: prepare]: ***********************
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling all the missing values with max, in column b The max value is 1.0
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling values with for column b 
+[2022-08-02 08:23:23,983: INFO: prepare]: Null value in column c is 92: 
+[2022-08-02 08:23:23,983: INFO: prepare]: ***********************
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling all the missing values with max, in column c The max value is 1.0
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling values with for column c 
+[2022-08-02 08:23:23,983: INFO: prepare]: Null value in column d is 92: 
+[2022-08-02 08:23:23,983: INFO: prepare]: ***********************
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling all the missing values with max, in column d The max value is 0.0
+[2022-08-02 08:23:23,983: INFO: prepare]: Filling values with for column d 
+[2022-08-02 08:23:23,983: INFO: prepare]: Dealt with missing values in the data
+[2022-08-02 08:23:23,983: INFO: prepare]: Checking Null found 0 0 0 0 values.
+[2022-08-02 08:23:23,983: INFO: stage_01_load_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2022-08-02 08:23:30,427: INFO: stage_02_convert_data]: 
+********************
+[2022-08-02 08:23:30,427: INFO: stage_02_convert_data]: >>>>> stage create_model started <<<<<
+[2022-08-02 08:23:30,427: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-02 08:23:30,427: INFO: common]: created directory at: artifacts\training_data
+[2022-08-02 08:23:30,427: INFO: stage_02_convert_data]: Training data does not found creating one at location artifacts\training_data
+[2022-08-02 08:23:35,625: INFO: stage_02_convert_data]: Training data has been saved at location artifacts\training_data
+[2022-08-02 08:23:35,687: INFO: stage_02_convert_data]: >>>>> stage create_model completed!<<<<<
+
+[2022-08-02 08:23:42,240: INFO: stage_03_training]: 
+********************
+[2022-08-02 08:23:42,240: INFO: stage_03_training]: >>>>> stage training_model started <<<<<
+[2022-08-02 08:23:42,240: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-02 08:23:42,240: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-02 08:23:42,240: INFO: common]: created directory at: artifacts\model
+[2022-08-02 08:23:42,521: INFO: stage_03_training]: Training data is loaded from artifacts\training_data
+[2022-08-02 08:23:45,698: INFO: stage_03_training]: The summary of the model is None
+[2022-08-02 10:05:44,210: INFO: stage_03_training]: Model is build and saved at artifacts\model\resnet_50.h5
+[2022-08-02 10:05:44,213: INFO: stage_03_training]: Callbacks are at logs directory and model is at artifacts\model
+[2022-08-02 10:05:44,213: INFO: stage_03_training]: Training Complete
+[2022-08-02 10:05:44,216: INFO: stage_03_training]: >>>>> stage training_model completed!<<<<<
+
