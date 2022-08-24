@@ -187,7 +187,7 @@ class loadData:
                 if i <= 0.5:
                     ones_and_zeros.append(0)
             logging.info("All the prediction probabilities are converted into 1 and zero by threshold of 0.5")
-            return li2, filtered_pred
+            return ones_and_zeros, filtered_pred
         except Exception:
             logging.info(f"Something bad happens at separate_prediction method. {Exception}")
             raise Exception

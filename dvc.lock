@@ -54,5 +54,5 @@ stages:
       size: 4351
     outs:
     - path: artifacts/model/resnet_50.h5
-      md5: 9ab735298e7b1855f10e3ddaabba5021
+      md5: 1737fde792e6e45c21da5f1aa6abff48
       size: 94806448

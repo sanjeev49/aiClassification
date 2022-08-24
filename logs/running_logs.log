@@ -202,3 +202,187 @@ NameError: name 'multioutput_model' is not defined
 [2022-08-02 10:05:44,213: INFO: stage_03_training]: Training Complete
 [2022-08-02 10:05:44,216: INFO: stage_03_training]: >>>>> stage training_model completed!<<<<<
 
+[2022-08-24 14:16:28,430: INFO: stage_03_training]: 
+********************
+[2022-08-24 14:16:28,430: INFO: stage_03_training]: >>>>> stage training_model started <<<<<
+[2022-08-24 14:16:28,436: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:16:28,441: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:16:28,442: INFO: common]: created directory at: artifacts\model
+[2022-08-24 14:16:29,475: INFO: stage_03_training]: Training data is loaded from artifacts\training_data
+[2022-08-24 14:16:32,983: INFO: stage_03_training]: The summary of the model is None
+[2022-08-24 14:41:21,819: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 14:41:21,819: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 14:41:21,821: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:41:21,823: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:41:21,823: ERROR: stage_04_infrence]: 'multioutput_resnet_model'
+Traceback (most recent call last):
+  File ".\src\stage_04_infrence.py", line 66, in <module>
+    prediction_model(config_path=parsed_args.config, params_path=parsed_args.params)
+  File ".\src\stage_04_infrence.py", line 38, in prediction_model
+    cleaned_csv_file = os.path.join(root_dir, artifacts["multioutput_resnet_model"])
+KeyError: 'multioutput_resnet_model'
+[2022-08-24 14:42:25,263: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 14:42:25,263: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 14:42:25,265: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:42:25,267: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:42:28,153: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 14:42:28,153: INFO: stage_04_infrence]: The probabilites of these claases are [0.9391184, 0.8939321, 0.6023869, 0.07989114]
+[2022-08-24 14:42:28,155: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [[array([0.9391184], dtype=float32), array([0.8939321], dtype=float32), array([0.6023869], dtype=float32), array([0.07989114], dtype=float32)]]
+[2022-08-24 14:42:28,156: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-08-24 14:45:26,706: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 14:45:26,706: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 14:45:26,708: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:45:26,710: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:45:29,322: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 14:45:29,322: INFO: stage_04_infrence]: The probabilites of these claases are [1, 1, 1, 0]
+[2022-08-24 14:45:29,322: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [[array([0.9391184], dtype=float32), array([0.8939321], dtype=float32), array([0.6023869], dtype=float32), array([0.07989114], dtype=float32)]]
+[2022-08-24 14:45:29,323: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-08-24 14:46:11,910: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 14:46:11,910: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 14:46:11,913: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:46:11,915: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:46:14,508: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 14:46:14,509: INFO: stage_04_infrence]: The probabilites of these claases are [[array([0.9391184], dtype=float32), array([0.8939321], dtype=float32), array([0.6023869], dtype=float32), array([0.07989114], dtype=float32)]]
+[2022-08-24 14:46:14,509: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 1, 0]
+[2022-08-24 14:46:14,509: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-08-24 14:47:25,497: INFO: stage_01_load_prepare_data]: 
+********************
+[2022-08-24 14:47:25,497: INFO: stage_01_load_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-08-24 14:47:25,499: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:47:25,500: INFO: common]: created directory at: artifacts
+[2022-08-24 14:47:25,500: INFO: common]: created directory at: artifacts\prepared
+[2022-08-24 14:47:25,508: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-08-24 14:47:25,512: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-08-24 14:47:25,512: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-08-24 14:47:25,525: INFO: prepare]: Image name removed from file and saved it as DataFrame at artifacts\prepared\csv_with_nan.csv
+[2022-08-24 14:47:25,538: INFO: prepare]: Null value in column a is 80: 
+[2022-08-24 14:47:25,539: INFO: prepare]: ***********************
+[2022-08-24 14:47:25,541: INFO: prepare]: Filling all the missing values with max, in column a The max value is 1.0
+[2022-08-24 14:47:25,541: INFO: prepare]: Filling values with for column a 
+[2022-08-24 14:47:25,542: INFO: prepare]: Null value in column b is 91: 
+[2022-08-24 14:47:25,542: INFO: prepare]: ***********************
+[2022-08-24 14:47:25,542: INFO: prepare]: Filling all the missing values with max, in column b The max value is 1.0
+[2022-08-24 14:47:25,542: INFO: prepare]: Filling values with for column b 
+[2022-08-24 14:47:25,543: INFO: prepare]: Null value in column c is 92: 
+[2022-08-24 14:47:25,543: INFO: prepare]: ***********************
+[2022-08-24 14:47:25,543: INFO: prepare]: Filling all the missing values with max, in column c The max value is 1.0
+[2022-08-24 14:47:25,543: INFO: prepare]: Filling values with for column c 
+[2022-08-24 14:47:25,544: INFO: prepare]: Null value in column d is 92: 
+[2022-08-24 14:47:25,544: INFO: prepare]: ***********************
+[2022-08-24 14:47:25,544: INFO: prepare]: Filling all the missing values with max, in column d The max value is 0.0
+[2022-08-24 14:47:25,544: INFO: prepare]: Filling values with for column d 
+[2022-08-24 14:47:25,544: INFO: prepare]: Dealt with missing values in the data
+[2022-08-24 14:47:25,546: INFO: prepare]: Checking Null found 0 0 0 0 values.
+[2022-08-24 14:47:25,549: INFO: stage_01_load_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2022-08-24 14:47:29,525: INFO: stage_02_convert_data]: 
+********************
+[2022-08-24 14:47:29,525: INFO: stage_02_convert_data]: >>>>> stage create_model started <<<<<
+[2022-08-24 14:47:29,528: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:47:29,528: INFO: common]: created directory at: artifacts\training_data
+[2022-08-24 14:47:29,529: INFO: stage_02_convert_data]: Training data does not found creating one at location artifacts\training_data
+[2022-08-24 14:47:39,180: INFO: stage_02_convert_data]: Training data has been saved at location artifacts\training_data
+[2022-08-24 14:47:39,247: INFO: stage_02_convert_data]: >>>>> stage create_model completed!<<<<<
+
+[2022-08-24 14:47:48,516: INFO: stage_03_training]: 
+********************
+[2022-08-24 14:47:48,516: INFO: stage_03_training]: >>>>> stage training_model started <<<<<
+[2022-08-24 14:47:48,519: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:47:48,520: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:47:48,520: INFO: common]: created directory at: artifacts\model
+[2022-08-24 14:47:49,011: INFO: stage_03_training]: Training data is loaded from artifacts\training_data
+[2022-08-24 14:47:51,079: INFO: stage_03_training]: The summary of the model is None
+[2022-08-24 14:48:49,647: INFO: stage_03_training]: Model is build and saved at artifacts\model\resnet_50.h5
+[2022-08-24 14:48:49,647: INFO: stage_03_training]: Callbacks are at logs directory and model is at artifacts\model
+[2022-08-24 14:48:49,647: INFO: stage_03_training]: Training Complete
+[2022-08-24 14:48:49,648: INFO: stage_03_training]: >>>>> stage training_model completed!<<<<<
+
+[2022-08-24 14:49:17,607: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 14:49:17,607: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 14:49:17,609: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:49:17,611: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:49:20,176: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 14:49:20,178: INFO: stage_04_infrence]: The probabilites of these claases are [[array([0.9821207], dtype=float32), array([0.7276917], dtype=float32), array([0.6646789], dtype=float32), array([0.00455941], dtype=float32)]]
+[2022-08-24 14:49:20,178: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 1, 0]
+[2022-08-24 14:49:20,178: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-08-24 14:49:34,458: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 14:49:34,459: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 14:49:34,461: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:49:34,462: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:49:37,020: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 14:49:37,021: INFO: stage_04_infrence]: The probabilites of these claases are [[array([0.9821207], dtype=float32), array([0.7276917], dtype=float32), array([0.6646789], dtype=float32), array([0.00455941], dtype=float32)]]
+[2022-08-24 14:49:37,022: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 1, 0]
+[2022-08-24 14:49:37,022: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+
+[2022-08-24 14:50:00,891: INFO: stage_01_load_prepare_data]: 
+********************
+[2022-08-24 14:50:00,892: INFO: stage_01_load_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2022-08-24 14:50:00,894: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:50:00,894: INFO: common]: created directory at: artifacts
+[2022-08-24 14:50:00,894: INFO: common]: created directory at: artifacts\prepared
+[2022-08-24 14:50:00,898: INFO: prepare]: All image name in C:\Users\sanjeev\Documents\aiclassification\data\labels.txt between 0 and 99 are renamed to correct format.
+[2022-08-24 14:50:00,902: INFO: prepare]: All image file in C:\Users\sanjeev\Documents\aiclassification\data\photos folders are renamed with correct format. 
+[2022-08-24 14:50:00,902: INFO: prepare]: All incorrect index position with compare to image and index are fixed. 
+[2022-08-24 14:50:00,915: INFO: prepare]: Image name removed from file and saved it as DataFrame at artifacts\prepared\csv_with_nan.csv
+[2022-08-24 14:50:00,928: INFO: prepare]: Null value in column a is 80: 
+[2022-08-24 14:50:00,928: INFO: prepare]: ***********************
+[2022-08-24 14:50:00,931: INFO: prepare]: Filling all the missing values with max, in column a The max value is 1.0
+[2022-08-24 14:50:00,931: INFO: prepare]: Filling values with for column a 
+[2022-08-24 14:50:00,931: INFO: prepare]: Null value in column b is 91: 
+[2022-08-24 14:50:00,931: INFO: prepare]: ***********************
+[2022-08-24 14:50:00,932: INFO: prepare]: Filling all the missing values with max, in column b The max value is 1.0
+[2022-08-24 14:50:00,932: INFO: prepare]: Filling values with for column b 
+[2022-08-24 14:50:00,932: INFO: prepare]: Null value in column c is 92: 
+[2022-08-24 14:50:00,932: INFO: prepare]: ***********************
+[2022-08-24 14:50:00,933: INFO: prepare]: Filling all the missing values with max, in column c The max value is 1.0
+[2022-08-24 14:50:00,933: INFO: prepare]: Filling values with for column c 
+[2022-08-24 14:50:00,933: INFO: prepare]: Null value in column d is 92: 
+[2022-08-24 14:50:00,933: INFO: prepare]: ***********************
+[2022-08-24 14:50:00,933: INFO: prepare]: Filling all the missing values with max, in column d The max value is 0.0
+[2022-08-24 14:50:00,933: INFO: prepare]: Filling values with for column d 
+[2022-08-24 14:50:00,934: INFO: prepare]: Dealt with missing values in the data
+[2022-08-24 14:50:00,935: INFO: prepare]: Checking Null found 0 0 0 0 values.
+[2022-08-24 14:50:00,939: INFO: stage_01_load_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2022-08-24 14:50:04,845: INFO: stage_02_convert_data]: 
+********************
+[2022-08-24 14:50:04,845: INFO: stage_02_convert_data]: >>>>> stage create_model started <<<<<
+[2022-08-24 14:50:04,847: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:50:04,848: INFO: common]: created directory at: artifacts\training_data
+[2022-08-24 14:50:04,849: INFO: stage_02_convert_data]: Training data does not found creating one at location artifacts\training_data
+[2022-08-24 14:50:10,393: INFO: stage_02_convert_data]: Training data has been saved at location artifacts\training_data
+[2022-08-24 14:50:10,455: INFO: stage_02_convert_data]: >>>>> stage create_model completed!<<<<<
+
+[2022-08-24 14:50:16,450: INFO: stage_03_training]: 
+********************
+[2022-08-24 14:50:16,451: INFO: stage_03_training]: >>>>> stage training_model started <<<<<
+[2022-08-24 14:50:16,453: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 14:50:16,454: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 14:50:16,455: INFO: common]: created directory at: artifacts\model
+[2022-08-24 14:50:16,743: INFO: stage_03_training]: Training data is loaded from artifacts\training_data
+[2022-08-24 14:50:18,710: INFO: stage_03_training]: The summary of the model is None
+[2022-08-24 16:50:34,473: INFO: stage_03_training]: Model is build and saved at artifacts\model\resnet_50.h5
+[2022-08-24 16:50:34,482: INFO: stage_03_training]: Callbacks are at logs directory and model is at artifacts\model
+[2022-08-24 16:50:34,482: INFO: stage_03_training]: Training Complete
+[2022-08-24 16:50:34,495: INFO: stage_03_training]: >>>>> stage training_model completed!<<<<<
+
+[2022-08-24 17:07:49,510: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 17:07:49,510: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 17:07:49,512: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 17:07:49,514: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 17:07:52,358: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 17:07:52,359: INFO: stage_04_infrence]: The probabilites of these claases are [[array([0.77828526], dtype=float32), array([0.56600815], dtype=float32), array([0.44933048], dtype=float32), array([0.05479139], dtype=float32)]]
+[2022-08-24 17:07:52,359: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 0, 0]
+[2022-08-24 17:07:52,359: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+

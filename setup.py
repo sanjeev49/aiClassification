@@ -42,3 +42,5 @@ setup(
     python_requires=">=3.7",
     install_requires=get_requirements_list()
 )
+
+print('hi')

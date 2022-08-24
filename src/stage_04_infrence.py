@@ -7,7 +7,7 @@ import argparse
 import os
 import logging
 from src.utils.common import read_yaml
-from src.utils.model import  load_keras_model, load_input_img, seperate_prediction
+from src.utils.model import loadData
 
 
 STAGE = "generate_infrence" 
@@ -34,15 +34,21 @@ def prediction_model(config_path, params_path):
     raw_img_dir = os.path.join(raw_data_dir, artifacts["RAW_IMAGE_DIR"])
     # Change it to any image from Multilabel/photos folder
     img_path = os.path.join(raw_img_dir, "image_968.jpg")
+    # cleaned csv location
+    cleaned_csv_file = os.path.join(root_dir, artifacts["CLEANED_CSV_FILE"])
 
     multioutput_resnet_model = os.path.join(model_dir, artifacts["BASE_MODEL_NAME"])
-    model = load_keras_model(multioutput_resnet_model)
 
-    loaded_img = load_input_img(img_path)
+    # intializing object of load_data class
+    predata = loadData(img_dir=raw_img_dir, cleaned_csv_location=cleaned_csv_file,
+                       resnet_50_model_location=multioutput_resnet_model)
+
+    model = predata.load_keras_model()
+    loaded_img = predata.load_input_img(img_path)
 
     prediction = model.predict(loaded_img)
     # Generating Prob_pred for probabilites pred is using a thrshold of 0.5 to assign a label 
-    prob_pred, pred= seperate_prediction(prediction)
+    pred, prob_pred = predata.separate_prediction(prediction)
     logging.info(f"The probabilites of these claases are {prob_pred}")
     logging.info(f"The actual prediction for the img {img_path} is {pred}")
     print(pred)
