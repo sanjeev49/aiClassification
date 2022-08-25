@@ -386,3 +386,13 @@ KeyError: 'multioutput_resnet_model'
 [2022-08-24 17:07:52,359: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 0, 0]
 [2022-08-24 17:07:52,359: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
 
+[2022-08-24 19:27:40,120: INFO: stage_04_infrence]: 
+********************
+[2022-08-24 19:27:40,120: INFO: stage_04_infrence]: >>>>> stage generate_infrence started <<<<<
+[2022-08-24 19:27:40,122: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2022-08-24 19:27:40,124: INFO: common]: yaml file: params.yaml loaded successfully
+[2022-08-24 19:27:44,447: INFO: model]: All the prediction probabilities are converted into 1 and zero by threshold of 0.5
+[2022-08-24 19:27:44,451: INFO: stage_04_infrence]: The probabilites of these claases are [[array([0.77828526], dtype=float32), array([0.56600815], dtype=float32), array([0.44933048], dtype=float32), array([0.05479139], dtype=float32)]]
+[2022-08-24 19:27:44,451: INFO: stage_04_infrence]: The actual prediction for the img C:\Users\sanjeev\Documents\aiclassification\data\photos\image_968.jpg is [1, 1, 0, 0]
+[2022-08-24 19:27:44,452: INFO: stage_04_infrence]: >>>>> stage generate_infrence completed!<<<<<
+
